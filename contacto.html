@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · ByPilares</title>
+<meta name="description" content="Escríbenos para conocer horarios, formatos y precios de las sesiones de ByPilares.">
+<meta property="og:title" content="Contacto · ByPilares">
+<meta property="og:description" content="Escríbenos para conocer horarios, formatos y precios de las sesiones de ByPilares.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#4a605c">
+<link rel="icon" href="assets/img/logos/lotus-mark-cream.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@200;300&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@200;300;400;500&family=Shadows+Into+Light+Two&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="bp-wordmark" href="index.html" aria-label="ByPilares, inicio"><span class="bp-wordmark__by">by</span><span class="bp-wordmark__name">Pilares</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="index.html">Inicio</a><a href="sesiones.html">Sesiones</a><a href="sobre.html">Sobre ByPilares</a><a href="contacto.html" aria-current="page">Contacto</a>
+      <a class="bp-btn bp-btn--primary" href="contacto.html">Reservar sesión</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Contacto</span>
+    <h1 class="display-xl">Escríbenos</h1>
+    <p class="lede">Cuéntanos qué te trae y qué práctica te interesa. Te respondemos con horarios, formatos y precios.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap contact-grid">
+    <form class="form" id="contact-form" data-endpoint="" novalidate>
+      <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" required></div>
+      <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="telefono">Teléfono o WhatsApp <span class="muted">(opcional)</span></label><input id="telefono" name="telefono" type="tel" autocomplete="tel"></div>
+      <div class="field">
+        <label for="interes">Me interesa</label>
+        <select id="interes" name="interes">
+          <option value="meditacion">Meditación guiada</option>
+          <option value="sanacion">Sesiones de sanación</option>
+          <option value="yoga">Yoga y respiración</option>
+          <option value="circulos">Círculos y ceremonias</option>
+          <option value="no-se">Todavía no lo sé</option>
+        </select>
+      </div>
+      <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required></textarea><span class="hint">Comparte solo lo que te sientas cómoda compartiendo.</span></div>
+      <div><button class="bp-btn bp-btn--primary" type="submit">Enviar mensaje</button></div>
+      <p class="form-status" id="form-status" role="status" hidden></p>
+    </form>
+    <aside class="contact-aside" data-theme="light">
+      <div class="note-card">
+        <p>"Ahí donde te rompes, es por donde entra la luz…"</p>
+        <img src="assets/img/logos/lotus-mark-cream.png" alt="">
+      </div>
+    </aside>
+  </div>
+</section>
+<script>
+  (function () {
+    var p = new URLSearchParams(location.search).get('interes');
+    var s = document.getElementById('interes');
+    if (p && s && s.querySelector('option[value="' + p.replace(/[^a-z-]/g, '') + '"]')) s.value = p;
+  })();
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="bp-wordmark bp-wordmark--on-dark" href="index.html" aria-label="ByPilares, inicio"><span class="bp-wordmark__by">by</span><span class="bp-wordmark__name">Pilares</span></a>
+    <ul class="footer-links">
+      <li><a href="index.html">Inicio</a></li><li><a href="sesiones.html">Sesiones</a></li><li><a href="sobre.html">Sobre ByPilares</a></li><li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <p class="footer-meta">© <span id="year">2026</span> ByPilares. Sanación y meditación, un respiro a la vez.</p>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

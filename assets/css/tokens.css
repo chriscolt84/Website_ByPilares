@@ -1,0 +1,114 @@
+/* ByPilares: generated from design-system/tokens.json. Edit the JSON, then run python3 scripts/build_tokens.py */
+:root, [data-theme="light"] {
+  --sage-teal: #6f8c88;
+  --sage: #93a097;
+  --slate: #6f7f98;
+  --blush: #f2dcd6;
+  --peach: #ebc5b9;
+  --ivory: #fdf7f5;
+  --gold-foil: #b18a20;
+  --gold-light: #e4d898;
+  --rose: #c49a94;
+  --sage-deep: #4a605c;
+  --surface: #fbf6f3;
+  --surface-raised: #ffffff;
+  --surface-tint: var(--blush);
+  --ink: #2c3634;
+  --ink-muted: #515c59;
+  --gold-ink: #6b5010;
+  --rose-ink: #7a504b;
+  --hairline: #e3d2cb;
+  --accent: var(--sage-deep);
+  --on-accent: var(--ivory);
+  --focus-ring: #6b5010;
+  --shadow-none: none;
+  --shadow-soft: 0 8px 24px rgba(44,54,52,0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sage-teal: #6f8c88;
+    --sage: #93a097;
+    --slate: #6f7f98;
+    --blush: #f2dcd6;
+    --peach: #ebc5b9;
+    --ivory: #fdf7f5;
+    --gold-foil: #b18a20;
+    --gold-light: #e4d898;
+    --rose: #c49a94;
+    --sage-deep: #4a605c;
+    --surface: #1f2927;
+    --surface-raised: #2a3633;
+    --surface-tint: #33403d;
+    --ink: #f5ede8;
+    --ink-muted: #bcc3bf;
+    --gold-ink: #dcc27a;
+    --rose-ink: #e2b9b2;
+    --hairline: #3d4a47;
+    --accent: #dcc27a;
+    --on-accent: #1f2927;
+    --focus-ring: #dcc27a;
+    --shadow-none: none;
+    --shadow-soft: 0 8px 24px rgba(0,0,0,0.32);
+  }
+}
+
+[data-theme="dark"] {
+  --sage-teal: #6f8c88;
+  --sage: #93a097;
+  --slate: #6f7f98;
+  --blush: #f2dcd6;
+  --peach: #ebc5b9;
+  --ivory: #fdf7f5;
+  --gold-foil: #b18a20;
+  --gold-light: #e4d898;
+  --rose: #c49a94;
+  --sage-deep: #4a605c;
+  --surface: #1f2927;
+  --surface-raised: #2a3633;
+  --surface-tint: #33403d;
+  --ink: #f5ede8;
+  --ink-muted: #bcc3bf;
+  --gold-ink: #dcc27a;
+  --rose-ink: #e2b9b2;
+  --hairline: #3d4a47;
+  --accent: #dcc27a;
+  --on-accent: #1f2927;
+  --focus-ring: #dcc27a;
+  --shadow-none: none;
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.32);
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+  --font-display: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --font-sans: Montserrat, "Helvetica Neue", Arial, sans-serif;
+  --font-condensed: Antonio, "Arial Narrow", "Helvetica Neue", sans-serif;
+  --font-script: "Shadows Into Light Two", "Bradley Hand", cursive;
+}
+
+.t-wordmark { font-family: var(--font-display); font-size: 28px; line-height: 32px; font-weight: 500; letter-spacing: 0.42em; }
+.t-display-xl { font-family: var(--font-display); font-size: 64px; line-height: 68px; font-weight: 400; letter-spacing: -0.01em; }
+.t-display-l { font-family: var(--font-display); font-size: 44px; line-height: 50px; font-weight: 400; }
+.t-display-italic { font-family: var(--font-display); font-size: 32px; line-height: 40px; font-weight: 400; font-style: italic; }
+.t-quote-l { font-family: var(--font-sans); font-size: 40px; line-height: 56px; font-weight: 200; letter-spacing: 0.01em; }
+.t-quote-m { font-family: var(--font-sans); font-size: 26px; line-height: 38px; font-weight: 300; }
+.t-poster-l { font-family: var(--font-condensed); font-size: 72px; line-height: 80px; font-weight: 200; letter-spacing: 0.02em; }
+.t-poster-m { font-family: var(--font-condensed); font-size: 40px; line-height: 64px; font-weight: 200; letter-spacing: 0.04em; }
+.t-heading { font-family: var(--font-sans); font-size: 20px; line-height: 28px; font-weight: 500; }
+.t-body { font-family: var(--font-sans); font-size: 16px; line-height: 26px; font-weight: 400; }
+.t-small { font-family: var(--font-sans); font-size: 14px; line-height: 22px; font-weight: 400; }
+.t-eyebrow { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.24em; }
+.t-note { font-family: var(--font-script); font-size: 34px; line-height: 44px; font-weight: 400; }
