@@ -7,7 +7,7 @@ Static marketing site for ByPilares (healing, meditation, yoga). Plain HTML, CSS
 | File | Page |
 | --- | --- |
 | `index.html` | Inicio |
-| `sesiones.html` | Sesiones (meditación, sanación, yoga, círculos) |
+| `sesiones.html` | Sesiones (meditación, acompañamiento, yoga y respiración, círculos) |
 | `sobre.html` | Sobre ByPilares |
 | `contacto.html` | Contacto (form) |
 
@@ -56,10 +56,17 @@ To connect it with Formspree (free tier available):
 1. Create a form at formspree.io and copy its endpoint, for example `https://formspree.io/f/abcdwxyz`.
 2. Paste it into `data-endpoint="..."` in `contacto.html` and commit.
 
+## Booking and contact
+
+- "Reservar sesión" and "Agendar sesión" buttons open Calendly: https://calendly.com/pilares-yoga/30min
+- WhatsApp and phone: 55 2565 2318 (`wa.me/525525652318`). Instagram: @pilaresyoga.
+- To change any of these, edit them in every HTML page (search for `calendly.com`, `wa.me` or `pilaresyoga`).
+
+## Logo
+
+`assets/img/logos/lotus-mark.svg` is a vector trace of the lotus mark from the original posts. Pages reference it with `<use href="...#lotus">`, and `site.css` uses it as the faint watermark on every page. Replace it with the designer's master SVG when available (keep `id="lotus"` on the path).
+
 ## Open items before launch
 
-- Real contact details: email, WhatsApp and Instagram are not on the site yet.
-- Prices, schedules and formats for each session (the copy currently invites people to ask).
+- Prices and schedules per practice (the copy currently invites people to ask or book).
 - A short biography for the "Sobre" page if the brand is led by a named practitioner.
-- Vector (SVG) versions of the PILARES wordmark and lotus; the current logos are rasters cut from social posts, so the lotus stays at 64px or smaller.
-- Fonts are free Google Fonts that approximate the original post typefaces (Cormorant Garamond, Montserrat, Antonio, Shadows Into Light Two).
