@@ -63,7 +63,7 @@ Optional, after activation: FormSubmit's confirmation email includes a random al
 
 ## Logo
 
-`assets/img/logos/lotus-mark.svg` is a vector trace of the lotus mark from the original posts. Pages reference it with `<use href="...#lotus">` (header, footer, section labels, cards, dividers, page headers, pillars, calls to action) and `site.css` uses it as the faint watermark on every page. Replace it with the designer's master SVG when available (keep `id="lotus"` on the path).
+The lotus mark is embedded directly in each page as an inline SVG symbol (`<symbol id="lotus">` right after `<body>`), and every placement uses `<use href="#lotus">`. That way it shows even when a page is opened straight from disk. The watermark in `site.css` carries the same shape as a data URI. `assets/img/logos/lotus-mark.svg` is the standalone file (a vector trace of the mark from the original posts); when the designer's master SVG arrives, replace the path in all three places.
 
 ## Open items before launch
 
