@@ -13,8 +13,8 @@
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* Contact form. Set data-endpoint on the form to a Formspree (or similar) URL
-     that accepts a JSON POST. See README.md, "Contact form". */
+  /* Contact form. Posts JSON to data-endpoint (FormSubmit, which emails
+     pilares.yoga@gmail.com). See README.md, "Contact form". */
   var form = document.getElementById('contact-form');
   if (!form) return;
   var status = document.getElementById('form-status');
@@ -35,6 +35,10 @@
     fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
       .then(function (r) {
         if (!r.ok) throw new Error(String(r.status));
+        return r.json().catch(function () { return {}; });
+      })
+      .then(function (j) {
+        if (j && (j.success === false || j.success === 'false')) throw new Error('rejected');
         form.reset();
         say('Gracias por escribir. Te respondemos pronto.');
       })

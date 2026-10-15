@@ -49,22 +49,21 @@ The site also works as-is on Netlify, Vercel or Cloudflare Pages (no build comma
 
 ## Contact form
 
-The form posts JSON to the URL in the `data-endpoint` attribute of `<form id="contact-form">` in `contacto.html`. It is empty, so the form currently shows a thank-you note without sending anything.
+The form on `contacto.html` sends each message by email to **pilares.yoga@gmail.com** through FormSubmit (formsubmit.co, free, no account). The address is set in the form's `data-endpoint` attribute.
 
-To connect it with Formspree (free tier available):
+One-time activation: the first time someone submits the form on the live site, FormSubmit emails pilares.yoga@gmail.com an "Activate Form" link. Click it once; from then on every message arrives in that inbox. Messages sent before activation are not delivered, so send a test message right after the site goes live.
 
-1. Create a form at formspree.io and copy its endpoint, for example `https://formspree.io/f/abcdwxyz`.
-2. Paste it into `data-endpoint="..."` in `contacto.html` and commit.
+Optional, after activation: FormSubmit's confirmation email includes a random alias for the address. Replace `pilares.yoga@gmail.com` in `data-endpoint` with that alias to keep the address out of the page source and reduce spam. A hidden honeypot field (`_honey`) already filters basic bots.
 
 ## Booking and contact
 
 - "Reservar sesión" and "Agendar sesión" buttons open Calendly: https://calendly.com/pilares-yoga/30min
-- WhatsApp and phone: 55 2565 2318 (`wa.me/525525652318`). Instagram: @pilaresyoga.
-- To change any of these, edit them in every HTML page (search for `calendly.com`, `wa.me` or `pilaresyoga`).
+- WhatsApp and phone: 55 2565 2318 (`wa.me/525525652318`). Instagram: @pilares.yoga. Email: pilares.yoga@gmail.com.
+- To change any of these, edit them in every HTML page (search for `calendly.com`, `wa.me`, `pilares.yoga` or `instagram.com`).
 
 ## Logo
 
-`assets/img/logos/lotus-mark.svg` is a vector trace of the lotus mark from the original posts. Pages reference it with `<use href="...#lotus">`, and `site.css` uses it as the faint watermark on every page. Replace it with the designer's master SVG when available (keep `id="lotus"` on the path).
+`assets/img/logos/lotus-mark.svg` is a vector trace of the lotus mark from the original posts. Pages reference it with `<use href="...#lotus">` (header, footer, section labels, cards, dividers, page headers, pillars, calls to action) and `site.css` uses it as the faint watermark on every page. Replace it with the designer's master SVG when available (keep `id="lotus"` on the path).
 
 ## Open items before launch
 
