@@ -73,7 +73,6 @@ p { margin: 0; }
 .hero .wrap { display: grid; gap: var(--space-8); align-items: center; padding-top: var(--space-16); padding-bottom: var(--space-16); }
 .hero__copy { display: flex; flex-direction: column; gap: var(--space-6); max-width: 34em; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
-.hero__art { justify-self: center; width: min(400px, 100%); height: auto; display: block; }
 .a-teal { fill: var(--sage-teal); } .a-peach { fill: var(--peach); } .a-slate { fill: var(--slate); } .a-gold { fill: var(--gold-foil); }
 .a-petal { fill: none; stroke: var(--gold-foil); stroke-width: 2; }
 @media (min-width: 900px) {
@@ -213,3 +212,39 @@ p { margin: 0; }
 
 .hero__mark { display: block; color: var(--gold-ink); }
 .hero__mark .lotus { width: 72px; height: 67px; }
+
+/* Arch photo: rounded top echoing the door, soft fade at the base, thin gold halo */
+.arch-photo { position: relative; margin: 0; justify-self: center; width: min(440px, 82vw); }
+.arch-photo img {
+  position: relative; z-index: 1; display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%;
+  border-radius: 999px 999px 0 0 / 46% 46% 0 0;
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, rgba(0,0,0,0.55) 86%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 70%, rgba(0,0,0,0.55) 86%, transparent 100%);
+}
+.arch-photo__halo {
+  position: absolute; z-index: 0; inset: -14px -14px 18% -14px;
+  border: 1.5px solid var(--gold-foil); border-bottom: 0;
+  border-radius: 999px 999px 0 0 / 46% 46% 0 0;
+  opacity: 0.7;
+}
+.arch-photo--hero img { object-position: 50% 26%; }
+.arch-photo--about { width: min(400px, 82vw); align-self: flex-start; margin: var(--space-4) 0 0 14px; }
+.arch-photo--about img { object-position: 50% 18%; }
+@media (prefers-reduced-motion: no-preference) {
+  .arch-photo img { animation: bp-fade-up 1.2s ease-out both; }
+  .arch-photo__halo { animation: bp-fade 1.8s ease-out 0.4s both; }
+  @keyframes bp-fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @keyframes bp-fade { from { opacity: 0; } to { opacity: 0.7; } }
+}
+.about-intro { display: flex; flex-direction: column; }
+
+/* Sesiones feature header with the door */
+.page-head--feature { padding: var(--space-16) 0; }
+.page-head--feature .wrap { display: grid; gap: var(--space-8); align-items: center; }
+.page-head__copy { display: flex; flex-direction: column; gap: var(--space-6); max-width: 36em; }
+.page-head__door { width: min(240px, 50vw); height: auto; justify-self: center; }
+@media (min-width: 900px) {
+  .page-head--feature { padding: var(--space-24) 0; min-height: 560px; display: flex; align-items: center; }
+  .page-head--feature .wrap { grid-template-columns: 1.4fr 1fr; }
+  .page-head__door { width: 280px; }
+}

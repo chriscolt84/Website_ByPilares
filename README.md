@@ -18,7 +18,7 @@ assets/css/tokens.css      generated from design-system/tokens.json (do not edit
 assets/css/components.css  ByPilares components: wordmark, buttons, cards (bp- classes)
 assets/css/site.css        page layout
 assets/js/site.js          mobile menu, contact form, footer year
-assets/img/                logos and gold-foil illustrations
+assets/img/                logos, gold-foil illustrations and photos (photos/)
 design-system/tokens.json  source of truth for colours, type, spacing, radii
 design-system/BRAND.md     brand book: voice, colour rules, typography, imagery
 scripts/build_tokens.py    rebuilds tokens.css after editing tokens.json
